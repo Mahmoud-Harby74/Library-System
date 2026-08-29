@@ -236,12 +236,3 @@ The project applies:
 It also provides the main functionality required for managing books and library members while handling invalid inputs and operations.
 
 
-## Screenshots
-
-![Main Menu](screenshots/Screenshot%202026-08-29%20145834.png)
-
-![Add Book](screenshots/Screenshot%202026-08-29%20145851.png)
-
-![Search Book](screenshots/Screenshot%202026-08-29%20145905.png)
-
-![Issue Book](screenshots/Screenshot%202026-08-29%20145914.png)
