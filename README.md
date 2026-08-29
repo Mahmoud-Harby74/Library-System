@@ -218,31 +218,6 @@ This helps make the application more reliable and user-friendly.
 
 ---
 
-## Screenshots
-
-Screenshots demonstrating the application running will be added to this section.
-
-### Main Menu
-
-![Main Menu](screenshots/menu.png)
-
-### Add Book
-
-![Add Book](screenshots/add_book.png)
-
-### Search Book
-
-![Search Book](screenshots/search_book.png)
-
-### Issue Book
-
-![Issue Book](screenshots/issue_book.png)
-
-### Return Book
-
-![Return Book](screenshots/return_book.png)
-
----
 
 ## Conclusion
 
@@ -260,16 +235,13 @@ The project applies:
 
 It also provides the main functionality required for managing books and library members while handling invalid inputs and operations.
 
+
 ## Screenshots
 
-### Main Menu
-![Main Menu](screenshots/menu.png)
+![Main Menu](screenshots/Screenshot%202026-08-29%20145834.png)
 
-### Add Book
-![Add Book](screenshots/add_book.png)
+![Add Book](screenshots/Screenshot%202026-08-29%20145851.png)
 
-### Search Book
-![Search Book](screenshots/search_book.png)
+![Search Book](screenshots/Screenshot%202026-08-29%20145905.png)
 
-### Issue Book
-![Issue Book](screenshots/issue_book.png)
+![Issue Book](screenshots/Screenshot%202026-08-29%20145914.png)
