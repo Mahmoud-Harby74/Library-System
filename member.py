@@ -2,6 +2,8 @@ from user import User
 
 
 class Member(User):
+    MAX_BORROWED_ITEMS = 3
+
     def __init__(self, user_id, name, email, member_id):
         super().__init__(user_id, name, email)
 
@@ -14,39 +16,37 @@ class Member(User):
 
     @property
     def borrowed_books(self):
-        return self.__borrowed_books
+        return list(self.__borrowed_books)
 
     def borrow_book(self, book):
         if not book.is_available:
-            print("Book is already issued.")
-            return False
+            raise ValueError(f"'{book.title}' is already issued to someone else.")
 
-        if len(self.__borrowed_books) >= 3:
-            print("You cannot borrow more than 3 books.")
-            return False
+        if len(self.__borrowed_books) >= self.MAX_BORROWED_ITEMS:
+            raise ValueError(
+                f"{self.name} cannot borrow more than "
+                f"{self.MAX_BORROWED_ITEMS} items at a time."
+            )
 
         self.__borrowed_books.append(book)
         book.is_available = False
 
-        print("Book issued successfully.")
         return True
 
     def return_book(self, book):
         if book not in self.__borrowed_books:
-            print("This book was not borrowed by this member.")
-            return False
+            raise ValueError(f"'{book.title}' was not borrowed by {self.name}.")
 
         self.__borrowed_books.remove(book)
         book.is_available = True
 
-        print("Book returned successfully.")
         return True
 
-    def view_borrowed_books(self):
-        if not self.__borrowed_books:
-            print("No borrowed books.")
-            return
+    def get_borrowed_books(self):
+        return list(self.__borrowed_books)
 
-        print("\nBorrowed Books:")
-        for book in self.__borrowed_books:
-            print(f"ID: {book.item_id} - {book.title}")
+    def get_info(self):
+        return (
+            f"Member ID: {self.__member_id}, "
+            f"Name: {self.name}, Email: {self.email}"
+        )

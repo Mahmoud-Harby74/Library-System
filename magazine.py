@@ -11,6 +11,10 @@ class Magazine(Item):
     def issue_number(self):
         return self.__issue_number
 
+    @issue_number.setter
+    def issue_number(self, value):
+        self.__issue_number = value
+
     def get_info(self):
         status = "Available" if self.is_available else "Issued"
 
